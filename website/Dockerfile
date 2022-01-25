@@ -1,8 +1,13 @@
-FROM projcert as vendor
+FROM composer:1.9.3 as vendor
+
 
 WORKDIR /tmp/
 
-RUN projcert install \
+COPY composer.json composer.json
+COPY composer.lock composer.lock
+
+
+RUN composer install \
     --ignore-platform-reqs \
     --no-interaction \
     --no-plugins \
