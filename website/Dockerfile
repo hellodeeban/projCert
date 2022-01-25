@@ -1,8 +1,8 @@
-FROM devopsproject:1.9.3 as vendor
+FROM projCert as vendor
 
 WORKDIR /tmp/
 
-RUN devopsproject install \
+RUN projCert install \
     --ignore-platform-reqs \
     --no-interaction \
     --no-plugins \
