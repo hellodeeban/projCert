@@ -1,8 +1,8 @@
-FROM projCert as vendor
+FROM projcert as vendor
 
 WORKDIR /tmp/
 
-RUN projCert install \
+RUN projcert install \
     --ignore-platform-reqs \
     --no-interaction \
     --no-plugins \
