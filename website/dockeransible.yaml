@@ -2,7 +2,7 @@
 - hosts: all
   become: true
   vars_files:
-    - variables.yml
+    - website/variables.yml
 
   tasks:
     - name: Install aptitude using apt
